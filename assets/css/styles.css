@@ -1,0 +1,450 @@
+/* Variables */
+:root {
+    --blue-150    : #10265f;
+    --blue-100    : #26438F;
+    --blue-50     : #CBD1E5;
+    --blue-0      : #F7F8FC;
+    --skyBlue-100 : #5AA3D7;
+    --skyBlue-50  : #ADD6F3;
+    --skyBlue-0   : #EAF6FF;
+    --grey-100    : #333333;
+    --grey-50     : #C0BFBF;
+    --grey-0      : #F2F2F2;
+    --white: #fff;
+    --action-first: #d4edda;
+    --action-sec  : #EC5F59;
+    --action-third: #F6DFA8;
+    --font-xlTitle: 22px;
+    --font-lTitle : 18px;
+    --font-normal : 14px;
+    --font-small  : 12px;
+    --font-button : 13px;
+    --transition  : all .4s ease-in-out;
+    --shadow-box: 0 0 15px rgb(0 0 0 / 20%);
+}
+
+
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family           : "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing   : antialiased;
+    -o-font-smoothing     : antialiased;
+    color                 : var(--grey-100);
+    font-size             : var(--font-normal);
+    font-weight           : 400;
+}
+.psAppPrograma--container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* Header */
+.psAppPrograma .psAppPrograma--header {
+    border-bottom: 1px solid var(--grey-0);
+    box-shadow: var(--shadow-box);
+    padding: .7rem 0;
+}
+.psAppPrograma .psAppPrograma--header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.psAppPrograma .psAppPrograma--header-logo a,
+.psAppPrograma .psAppPrograma--header-logo a img {
+    display: inline-block;
+}
+.psAppPrograma .psAppPrograma--header-logo a img {
+    width: 130px;
+    max-width: 130px;
+    min-width: 130px;
+}
+
+.psAppPrograma .psAppPrograma--header-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.psAppPrograma .psAppPrograma--header-menu ul > span {
+    display: none;
+}
+.psAppPrograma .psAppPrograma--header-menu ul li {
+    margin-right: 2rem;
+}
+.psAppPrograma .psAppPrograma--header-menu ul li:last-child {
+    margin-right: 0;
+}
+.psAppPrograma .psAppPrograma--header-menu ul li a {
+ font-weight: 600;
+ color: var(--grey-100);
+ text-decoration: none;
+ transition: var(--transition);
+ line-height: 1;
+}
+.psAppPrograma .psAppPrograma--header-menu ul li a:hover,
+.psAppPrograma .psAppPrograma--header-menu ul li a:focus {
+    color: var(--skyBlue-100);
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma--header-menu li:has(.psAppPrograma-link) {
+    padding-left: 2rem;
+    border-left: 2px solid var(--grey-100);
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPrograma .psAppPrograma--header-menu-icon {
+    display: none;
+}
+
+/* Programas */
+.psAppPrograma-main {
+    margin-top: 2rem;
+}
+.psAppPrograma .psAppPrograma-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+.psAppPrograma .psAppPrograma-titulo h2 {
+    font-size: var(--font-xlTitle);
+    text-align: center;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+.psAppPrograma .psAppPrograma-titulo h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--skyBlue-100);
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--shadow-box);
+}
+.psAppPrograma .psAppPrograma-programas-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.psAppPrograma .psAppPrograma-programas-item-img {
+    width: 30%;
+    box-sizing: border-box;
+    border: 2px solid var(--grey-50);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+}
+.psAppPrograma .psAppPrograma-programas-item-img img {
+    width: 50%;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt {
+    width: 70%;
+    box-sizing: border-box;
+    padding-left: 3rem;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-content p {
+    line-height: 1.5;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-action a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-action-tyc {
+    font-weight: 700;
+    color: var(--skyBlue-100);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-action-tyc:hover,
+.psAppPrograma .psAppPrograma-programas-item-txt-action-tyc:focus {
+    transition: var(--transition);
+    opacity: .6;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-action-tyc img {
+    display: inline-block;
+    width: 20px;
+    margin-right: .7rem;
+}
+.psAppPrograma .psAppPrograma-programas-item-txt-action-web {
+    font-weight: 700;
+}
+
+
+/* Footer */
+.psAppPrograma .psAppPrograma-footer {
+    margin-top: 6rem;
+}
+.psAppPrograma .psAppPrograma-footer-main {
+    background-image: linear-gradient(to bottom, #3ea4dc -61%, #264194 92%);
+    padding: 3rem 0;
+    box-sizing: border-box;
+}
+.psAppPrograma .psAppPrograma-footer-mainWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.psAppPrograma .psAppPrograma-footer-main h3 {
+    font-size: var(--font-lTitle);
+    color:var(--white);
+    margin-top: 0;
+}
+.psAppPrograma .psAppPrograma-footer-main ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.psAppPrograma .psAppPrograma-footer-main ul li {
+    margin-bottom: 1rem;
+}
+.psAppPrograma .psAppPrograma-footer-main ul li:last-child {
+    margin-bottom: 0;
+}
+.psAppPrograma .psAppPrograma-footer-main ul li a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma-footer-main ul li a:hover,
+.psAppPrograma .psAppPrograma-footer-main ul li a:focus {
+    transition: var(--transition);
+    opacity: .6;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col1 a:first-child {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 40px;
+    background-color: var(--skyBlue-100);
+    color: #fff;
+    font-size: var(--font-lTitle);
+    font-weight: 600;
+    padding: 0 30px;
+    border-radius: 5px;
+    box-shadow: var(--shadow-box);
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col1 a:first-child:hover,
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col1 a:first-child:focus {
+    transition: var(--transition);
+    opacity: .6;   
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col1 p {
+    color: var(--white);
+    margin: 1.5rem 0;
+    font-weight: 700;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col1 a:nth-child(3) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--font-lTitle);
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col1 a:nth-child(3) img {
+    display: inline-block;
+    width: 30px;
+    margin-right: .7rem;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 div a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .7rem;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background-color: rgb(204 204 204 / 41%);;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 div a:hover {
+    opacity: .6;
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: .7rem;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 div a:first-child img {
+    width: 10px;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 div a:last-child img {
+    width: 20px;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 p {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    color: var(--white);
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 p a {
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition);
+    font-weight: 400;
+}
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 p a:hover,
+.psAppPrograma .psAppPrograma-footer-main-col.footer-main-col3 p a:focus {
+    transition: var(--transition);
+    opacity: .6;
+}
+.psAppPrograma .psAppPrograma-footer-r {
+    background-color: var(--blue-150);
+    display: flex;
+    padding: 2rem 0;
+    font-size: var(--font-small);
+    color: var(--white);
+}
+.psAppPrograma .psAppPrograma-footer-r p {
+    margin: 0;
+}
+.psAppPrograma .psAppPrograma-footer-r a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+.psAppPrograma .psAppPrograma-footer-r a:hover,
+.psAppPrograma .psAppPrograma-footer-r a:active {
+    transition: var(--transition);
+    opacity: .6;
+}
+
+
+
+
+/* Componentes */
+.psAppPrograma-link {
+    color: var(--skyBlue-100) !important;
+    transition: var(--transition);
+}
+.psAppPrograma-link:hover,
+.psAppPrograma-link:focus {
+    opacity: .6;
+    transition: var(--transition);
+}
+.psAppPrograma-button {
+    height: 40px;
+    background-color: var(--skyBlue-100);
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    line-height: 1;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.psAppPrograma-button:hover,
+.psAppPrograma-button:focus {
+    transition: var(--transition);
+    background-color: var(--skyBlue-50);
+}
+
+@media screen and (max-width: 1025px) {
+
+    .psAppPrograma .psAppPrograma--header-menu ul {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 85vw;
+        background-color: var(--grey-0);
+        z-index: 2;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 3rem 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        box-shadow: 0 -5px 30px rgba(51, 51, 51, 0.2);
+        transition: var(--transition);
+    }
+    .right0 {
+        right: 0 !important;
+        transition: var(--transition);
+    }
+    .psAppPrograma .psAppPrograma--header-menu ul li {
+        margin: 1rem 0;
+    }
+    .psAppPrograma .psAppPrograma--header-menu-icon {
+        display: block;
+    }
+    .psAppPrograma .psAppPrograma--header-menu-icon img {
+        display: block;
+        width: 25px;
+        cursor: pointer;
+    }
+    .psAppPrograma--header-menu-closeMobile {
+        display: block !important;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        cursor: pointer;
+        transition: var(--transition);
+    }
+    .psAppPrograma--header-menu-closeMobile img {
+        width: 15px;
+    }
+    .psAppPrograma .psAppPrograma--header-menu li:has(.psAppPrograma-link) {
+        padding-left: 0;
+        border: 0;
+    }
+    .psAppPrograma .psAppPrograma-programas-item {
+        flex-direction: column;
+    }
+    .psAppPrograma .psAppPrograma-programas-item-txt,
+    .psAppPrograma .psAppPrograma-programas-item-img {
+        width: 100%;
+    }
+    .psAppPrograma .psAppPrograma-programas-item-img {
+        padding: 2rem;
+    }
+    .psAppPrograma .psAppPrograma-programas-item-txt {
+        padding-left: 0;
+    }
+    .psAppPrograma .psAppPrograma-programas-item-txt-action {
+        margin-top: 2rem;
+    }
+    .psAppPrograma .psAppPrograma-programas-item {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border: 1px solid var(--grey-50);
+        border-radius: 7px;
+    }
+    .psAppPrograma .psAppPrograma-footer-mainWrapper {
+        flex-direction: column;
+    }
+    .psAppPrograma-footer-main-col.footer-main-col2 {
+        margin: 3rem 0;
+    }
+    .psAppPrograma-footer-main-col.footer-main-col1 p:last-child {
+        margin-bottom: 0;
+    }
+}
